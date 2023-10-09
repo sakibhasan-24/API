@@ -21,8 +21,8 @@ function calling() {
     .then((data) => display(data));
   function display(users) {
     const personContainer = document.getElementById("persons");
-    //   console.log(personContainer);
     for (const user of users) {
+      console.log(user);
       const div = document.createElement("div");
 
       personContainer.style.opacity = 1;
@@ -31,8 +31,8 @@ function calling() {
     <h1 class="title">${user.name}</h1>
     <div class="info">
       <h3>${user.email}</h3>
-      <h3>${user.address}</h3>
-      <p>${user.company}</p>
+      <h3>${user.address.city}</h3>
+      <p>${user.company.name}</p>
       <h3>${user.website}</h3>
     </div>
     `;
